@@ -1,0 +1,16 @@
+extends _layout.pug
+
+block var
+	- var title = 'About'
+	- var bodyClass = 'about-page'
+
+block main
+	include ../components/top-banner/index.pug
+	include ../components/breadcrumb/index.pug
+	.container.project-display-pad
+		.row
+			.col-lg-3
+				include ../components/project/side-nav/index.pug
+			.col-lg-9
+				include ../components/project/project-display/index.pug
+

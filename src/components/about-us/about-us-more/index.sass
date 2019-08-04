@@ -1,0 +1,126 @@
+.about-us-more
+	padding: 50px 0 40px 0
+	article
+		position: relative
+		transition: max-height .5s ease-in-out
+		&.active
+			.content
+				overflow: visible
+				&:after
+					display: none
+			.watch-more-about-us
+				bottom: -40px
+				a
+					em
+						transform: rotate(-180deg)
+		@media screen and(max-width:1025px)
+			&.active
+				.watch-more-about-us
+					bottom: 0
+
+		.content
+			max-height: 360px
+			overflow: hidden
+			position: relative
+			transition: max-height .5s ease-in-out
+			&:after
+				z-index: 11
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 50px
+				background: linear-gradient(180deg, rgba(#ffffff,.3) 0%, rgba(#FFFFFF,1) 100%)
+			@media screen and(max-width:1200px)
+				max-height: 400px
+		.watch-more-about-us
+			position: absolute
+			bottom: -30px
+			z-index: 13
+			a
+				font-size: 16px
+				font-weight: 500
+				color: #dd1b23
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				em
+					color: #dd1b23
+					transition: transform .8s ease-in-out
+					line-height: 16px
+					font-size: 20px
+					margin: 0 0
+			@media screen and(max-width:1441px)
+				bottom: -40px
+			@media screen and(max-width:1200px)
+				bottom: -40px
+	
+		&:after,&:before
+			content: ""
+			display: table
+			clear: both
+		img
+			padding-left: 20px
+			position: relative
+			z-index: 13
+			float: right
+			clear: both
+			max-width: 100%
+			height: auto
+		span
+			font-size: 22px
+			font-weight: 700
+			color: #333333
+			display: block
+			margin-bottom: 16px
+		*
+			font-size: 16px
+			color: #333333
+			line-height: 24px
+			margin-bottom: 16px
+	@media screen and(max-width:1441px)
+		article
+			.watch-more-about-us
+				&:before
+					top: -9px
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+		article
+			padding: 20px 0 0 0
+			span
+				font-size: 20px
+			.watch-more-about-us
+				left: 50%
+				transform: translateX(-50%)
+
+		
+
+			img
+				height: auto
+				max-width: 50%
+				margin: 0
+	@media screen and(max-width:768px)
+		article
+			margin-top: -16px
+			padding:  0  0 16px 0
+			display: flex
+			flex-flow: column
+			align-items: center
+			span
+				font-size: 18px
+			img
+				max-width: 100%
+				float: none
+				margin: 0
+				padding: 16px 0 16px 10px
+			
+	@media screen and(max-width:576px)
+		article
+			padding: 0 0 16px 0 
+			img
+				max-width: 100%
+				float: none
+				margin: 0
+				padding: 16px 0

@@ -1,0 +1,154 @@
+
+.article-title-brown-center
+	margin-bottom: 20px
+	*
+		font-size: 36px
+		font-weight: 600
+		color: #333333
+		line-height: 45px
+		text-align: center
+		text-transform: uppercase
+	h1
+		font-size: 16px
+		line-height: 24px
+		font-weight: 400
+		text-transform: none
+		padding: 0 30px
+		margin-top: 16px
+	@media screen and(max-width:1441px)
+		*
+			font-size: 32px
+			line-height: 40px
+	@media screen and(max-width:1025px)
+		margin-bottom: 0
+		*
+			font-size: 28px
+			line-height: 35px
+	@media screen and(max-width:768px)
+		*
+			font-size: 24px
+			line-height: 31px
+	@media screen and(max-width:576px)
+		h1
+			margin-top: 10px
+			padding: 0 
+.article-title-brown-start
+	margin-bottom: 20px
+	*
+		font-size: 36px
+		font-weight: 600
+		color: #333333
+		line-height: 45px
+		text-align: left
+		text-transform: uppercase
+	@media screen and(max-width:1441px)
+		*
+			font-size: 32px
+			line-height: 40px
+	@media screen and(max-width:1025px)
+		margin-bottom: 0
+		*
+			font-size: 28px
+			line-height: 35px
+	@media screen and(max-width:768px)
+		*
+			font-size: 24px
+			line-height: 31px
+.article-title-white-center
+	margin-bottom: 20px
+	*
+		font-size: 36px
+		font-weight: 600
+		color: #ffffff
+		line-height: 45px
+		text-align: center
+		text-transform: uppercase
+	@media screen and(max-width:1441px)
+		
+		*
+			font-size: 32px
+			line-height: 40px
+	@media screen and(max-width:1025px)
+		margin-bottom: 0
+		
+		*
+			font-size: 28px
+			line-height: 35px
+	@media screen and(max-width:768px)
+		*
+			font-size: 24px
+			line-height: 31px
+.article-title-small
+	*
+		font-size: 22xp
+		text-transform: uppercase
+		color: #333333
+		text-align: left
+		line-height: 30px
+		font-weight: 600
+	h1
+		margin-bottom: 30px
+		@media screen and(max-width:1025px)
+			margin-bottom: 16px
+
+.article-red-button
+	a
+		width: 160px
+		height: 40px
+		border: 1px solid $main
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $main !important
+		text-transform: uppercase
+		vertical-align: middle
+		transform: perspective(1px) translateZ(0)
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+		transition-duration: 0.3s
+		&:hover
+			background: $main
+			color: #ffffff !important
+			em
+				color: #ffffff
+				transform: translateX(4px)
+		em
+			color: $main
+			line-height: 0
+			margin: 0 0 0 10px
+			transform: translateZ(0)
+			transition-duration: 0.3s
+			transition-property: transform
+			transition-timing-function: ease-out
+.project-display-pad
+	padding: 50px 0 20px 0 
+	@media screen and(max-width:1025px)
+		padding: 0 0 10px 0
+//Tab active css
+.tab-wrapper
+	.tab-item
+		display: none !important
+		&.active
+			display: flex !important
+.back-to-top
+	cursor: pointer
+	border: 2px solid $main
+	position: fixed
+	right: 10%
+	height: 40px
+	display: flex
+	justify-content: center
+	align-items: center
+	bottom: 25%
+	padding: 8px
+	z-index: 11
+	em
+		color: $main
+		font-size: 25px
+	@media screen and(max-width:1600px)
+		right: 50px
+	@media screen and(max-width:1400px)
+		right: 30px
+	@media screen and(max-width:1025px)
+		height: 30px
+		em
+			font-size: 15px

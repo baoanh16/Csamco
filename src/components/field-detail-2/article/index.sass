@@ -1,0 +1,44 @@
+.field-detail-article-2
+	padding: 50px 0
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+	article
+		p
+			font-size: 15px
+			color: #333333
+			line-height: 22px
+			
+		.article-image
+			height: 360px
+			width: auto
+			background: $main
+			img
+				margin-top: 18px
+				margin-left: 25px
+				width: 100%
+				height: 100%
+				object-fit: cover
+		@media screen and(max-width:1441px)
+			.article-image
+				height: 350px
+		@media screen and(max-width:1025px)
+			margin-top: 20px
+			p
+				padding-top: 10px
+		@media screen and(max-width:768px)
+			margin-top: 10px
+			p
+				padding: 0 16px
+			.article-image
+				height: 300px
+				width: auto
+				background: $main
+				img
+					margin: 0
+		@media screen and(max-width:576px)
+			.article-image
+				height: 250px
+		@media screen and(max-width:400px)
+			.article-image
+				height: 200px
+				

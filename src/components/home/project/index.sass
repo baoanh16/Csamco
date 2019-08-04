@@ -1,0 +1,158 @@
+.home-project
+	padding: 50px 0
+	background: #ffffff
+	@media screen and(max-width:1025px)
+		padding: 40px 0 20px  0
+	article
+		margin-bottom: 30px
+		&:hover
+			.project-title
+				a
+					color: $main
+		.caption
+			margin-bottom: 16px
+		.article-image
+			height: 400px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				margin-bottom: 10px
+		.project-title
+			margin: 16px 0 0 16px
+			p
+				color: #666666
+				font-size: 12px
+				font-weight: 500
+				text-transform: uppercase
+				position: relative
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					left: -16px
+					bottom: 50%
+					transform: translateY(-50%)
+					width: 12px
+					height: 1px
+					background: #eb100e
+			a
+				transition: .3s all ease-in-out
+				cursor: pointer
+				font-size: 24px
+				color: #343434
+				font-weight: 700
+			
+
+	@media screen and(max-width:1025px)
+		article
+			.caption
+				margin-top: 16px
+
+	@media screen and(max-width:576px)
+		article
+			.article-image
+				height: 300px
+	@media screen and(max-width:400px)
+		article
+			.article-image
+				height: 250px
+.other-project-wrapper
+	overflow: visible
+	padding: 0 10px
+	position: relative
+	@media screen and(max-width:1025px)
+		margin-top: 20px
+	.other-project-swiper-wrapper
+		overflow: hidden
+		padding: 0 10px
+	.navigation-wrapper
+		.navigation-prev,.navigation-next
+			cursor: pointer
+			position: absolute
+			font-size: 20px
+			width: 36px
+			height: 36px
+			border: 2px solid #999999
+			top: 60%
+			transform: translateY(-50%)
+			display: flex
+			justify-content: center
+			align-items: center
+			pointer-events: auto
+			@media screen and(max-width:1441px)
+				top: 57%
+			@media screen and(max-width:1200px)
+				top: 53%
+			&.swiper-button-disabled
+				opacity: .5
+				pointer-events: none
+			&:focus
+				outline: none
+			em
+				font-size: 24px
+				color: #999999
+		.navigation-prev
+			left: -30px
+		.navigation-next
+			right: -30px
+	@media screen and(max-width:1025px)
+		.navigation-wrapper
+			.navigation-prev
+				left: -20px
+			.navigation-next
+				right: -20px
+	@media screen and(max-width:768px)
+		.navigation-wrapper
+			display: none
+
+	.swiper-container
+		overflow: visible
+.other-project-item
+	transition: .3s all ease-in-out
+	&:hover
+		box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2)
+		background: $main
+		.other-project-image
+			img
+				margin: -5px 0 0 -5px
+		.other-project-caption
+			*
+				color: #ffffff
+	.other-project-image
+		height: 200px
+		width: auto
+		img
+			transition: .3s all ease-in-out
+			width: 100%
+			height: 100%
+			object-fit: cover
+	
+	.other-project-caption
+		padding: 16px 16px 16px 20px
+		*
+			color: #333333
+		p
+			font-size: 12px
+			position: relative
+			font-weight: 500
+			line-height: 20px
+			text-transform: uppercase
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				left: -16px
+				top: 8px
+				width: 12px
+				height: 1px
+				background: $main
+		.caption
+			font-weight: 700
+			font-size: 16px
+			line-height: 24px
+
+		@media screen and(max-width:768px)
+			.caption
+				font-size: 15px

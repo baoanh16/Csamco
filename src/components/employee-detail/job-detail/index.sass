@@ -1,0 +1,194 @@
+.job-detail
+	padding: 50px 0
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+	article
+		.job-apply-button-wrapper
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			margin-top: 25px
+			.red-button
+				&:hover
+					a
+						&:before
+							transform: scaleX(1)
+							transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				a
+					height: 50px
+					padding: 16px 40px
+					background: $main
+					display: flex
+					justify-content: center
+					align-items: center
+					text-decoration: none
+					color: #ffffff
+					font-size: 18px
+					text-transform: uppercase
+					vertical-align: middle
+					transform: perspective(1px) translateZ(0)
+					box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+					position: relative
+					transition-property: color
+					transition-duration: 0.5s
+					&:before
+						content: ""
+						position: absolute
+						z-index: -1
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						background: #2098D1
+						transform: scaleX(0)
+						transform-origin: 0 50%
+						transition-property: transform
+						transition-duration: 0.5s
+						transition-timing-function: ease-out
+			p
+				font-size: 14px
+				padding: 0 16px
+			.grey-button
+				padding: 16px 30px
+				height: 50px
+				background: #f5f5f5
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-flow: column
+				display: flex
+				vertical-align: middle
+				transform: perspective(1px) translateZ(0)
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+				position: relative
+				transition-property: color
+				transition-duration: 0.5s
+				&:hover
+					a
+						color: #ffffff
+					span
+						color: #ffffff
+					&:before
+						transform: scaleX(1)
+						transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				&:before
+					content: ""
+					position: absolute
+					z-index: -1
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background: #666666
+					transform: scaleX(0)
+					transform-origin: 100% 50%
+					transition-property: transform
+					transition-duration: 0.5s
+					transition-timing-function: ease-out
+				a
+					transition: .3s all ease-in-out
+					text-decoration: none
+					color: #666666
+					text-transform: uppercase 
+					font-size: 18px
+				span
+					font-style: italic
+					font-weight: 200
+					font-size: 14px
+					color: #999999
+					margin-top: -5px
+		h2
+			font-size: 16px
+			font-weight: 600
+			line-height: 25px
+			text-transform: uppercase
+			text-align: left
+			margin-bottom: 16px
+		h3
+			font-size: 16px
+			font-weight: 600
+			line-height: 25px
+			text-transform: uppercase
+			text-align: left
+			margin-bottom: 6px
+		ul
+			margin-bottom: 16px
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-flow: column
+			list-style-type: none
+			padding: 0 0 0 20px
+			@media screen and(max-width:576px)
+				padding: 0
+			li
+				display: inline-block
+				padding: 4px 0 4px 16px
+				&:before
+					line-height: 16px
+					content: '\2022'
+					color: #999999
+					font-size: xx-large
+					display: inline-block
+					width: 22px
+					margin-left: -16px
+		table
+			margin-bottom: 30px
+			width: 100%
+		tbody
+			tr
+				padding: 16px 20px
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				&:nth-child(odd)
+					background: #f5f5f5
+				td
+					width: 30% !important
+					*
+						font-size: 16px
+					&:first-child
+						font-weight: 600
+						color: #333333
+					&:nth-child(2)
+						color: #666666
+						font-weight: 400
+						width: 70% !important
+		@media screen and(max-width:1441px)
+			tbody
+				tr
+					padding: 12px 20px
+		@media screen and(max-width:1025px)
+			article
+				h2
+					margin-bottom: 8px
+			tbody
+				tr
+					padding: 12px 20px
+		@media screen and(max-width:768px)
+			tbody
+				tr
+					td
+						width: 40% !important
+						&:nth-child(2)
+							width: 60% !important
+		@media screen and(max-width:576px)
+			.job-apply-button-wrapper
+				flex-flow: column
+				p
+					padding: 16px
+			tbody
+				tr
+					display: flex
+					justify-content: center
+					align-items: center
+					flex: 0 0 100%
+					flex-wrap: wrap
+					td
+						flex: 0 0 100%
+						width: 100% !important
+						&:nth-child(2)
+							width: 60% !important
+
+
+

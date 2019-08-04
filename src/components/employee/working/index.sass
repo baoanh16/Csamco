@@ -1,0 +1,71 @@
+.working-condition
+	padding: 0 0 50px 0
+	@media screen and(max-width:1025px)
+		padding: 0 0 40px 0
+	article
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-flow: column
+		.article-image
+			height: 310px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				opacity: 1
+				transition: .3s all ease-in-out
+				&:hover
+					opacity: .7
+		@media screen and(max-width:1025px)
+			margin-top: 20px
+			align-items: center
+		@media screen and(max-width:768px)
+			.article-image
+				height: 100%
+	.item-chart-wrapper
+		width: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		flex-wrap: wrap
+		flex: 0 0 100%
+		margin: 16px -10px 0 -10px
+	.item-chart
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-flow: column
+		flex: 0 0 calc(33.333% - 10px)
+		padding: 0 10px
+		.item-image
+			img
+		.item-caption
+			*
+				margin-top: 10px
+				font-size: 16px
+				font-weight: 700
+				
+	@media screen and(max-width:1200px)
+		.item-chart
+			align-items: center
+			.item-caption
+				text-align: center
+				*
+					font-size: 15px
+	@media screen and(max-width:1025px)
+		.item-chart-wrapper
+			justify-content: space-between
+	@media screen and(max-width:576px)
+		.item-chart
+			flex: 0 0 50%
+			margin-bottom: 20px
+			align-items: center
+			&:last-child
+				flex: 0 0 100%
+				margin: 0
+			.item-caption
+				text-align: center
+				*
+					font-size: 14px

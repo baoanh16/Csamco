@@ -1,0 +1,72 @@
+.field-detail-relate
+	padding: 0 0 50px 0
+	@media screen and(max-width:1025px)
+		padding: 0 0 40px 0
+.field-detail-relate-wrapper
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	.relate-item
+		max-width: 300px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-flow: column
+		position: relative
+		&:not(:last-child)
+			margin-right: 15px
+	.relate-image
+		height: 340px
+		width: auto
+		a
+			display: block
+			height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.relate-caption
+		position: absolute
+		bottom: 20px
+		left: 16px
+		a
+			text-transform: uppercase
+			font-size: 18px
+			color: #ffffff
+			line-height: 24px
+			font-weight: 700
+	@media screen and(max-width:1441px)
+		.relate-item
+			max-width: 250px
+		.relate-image
+			height: 300px
+		.relate-caption
+			a
+				font-size: 16px
+				line-height: 22px
+	@media screen and(max-width:1025px)
+		margin-top: 20px
+		.relate-image
+			height: 250px
+	@media screen and(max-width:768px)
+		.relate-image
+			height: 210px
+		.relate-caption
+			a
+				font-size: 16px
+				line-height: 22px
+	@media screen and(max-width:576px)
+		.relate-item
+			max-width: 100%
+		.relate-image
+			height: 200px
+		.relate-caption
+			a
+				font-size: 14px
+				line-height: 21px
+	@media screen and(max-width:400px)
+		flex-flow: column
+		.relate-item
+			flex: 0 0 100%
+			&:not(:last-child)
+				margin: 0 0 15px 0

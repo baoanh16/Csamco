@@ -1,0 +1,14 @@
+extends _layout.pug
+
+block var
+	- var title = 'About'
+	- var bodyClass = 'about-page'
+
+block main
+	include ../components/top-banner/index.pug
+	include ../components/breadcrumb/index.pug
+	include ../components/about-us/about-us-more/index.pug
+	include ../components/about-us/philosophy/index.pug
+	include ../components/about-us/chart/index.pug
+	include ../components/about-us/structure/index.pug
+	include ../components/about-us/certificate/index.pug

@@ -1,0 +1,330 @@
+header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 95px
+	background: #ffffff
+	border-bottom: 4px solid #d5d5d5
+	z-index: 115
+	@media screen and(max-width:1025px)
+		height: 60px
+	
+		.header-samco
+			height: 100%
+			.container
+				height: 100%
+		.header-right
+			height: 100%
+				
+.header-wrapper
+	margin-top: 10px
+	height: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@media screen and(max-width:1025px)
+		margin-top: 0
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.nav-brand
+		position: relative
+		a
+			display: block
+			height: 100%
+			cursor: pointer
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			background-image: url('../img/shape.png')
+			background-size: cover
+			width: 220px
+			height: 27px
+			left: -50px
+			background-repeat: no-repeat
+			bottom: -28px
+			background-size: contain
+			z-index: 10
+		@media screen and(max-width:1025px)
+			img
+				max-width: 100%
+				height: auto
+				width: 60%
+			&:after
+				display: none
+	
+	.top-header
+		margin-top: -16px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		@media screen and(max-width:1025px)
+			margin: 0
+			justify-content: center
+			height: 100%
+		.contact-wrapper,.ModuleContent
+			display: flex
+			justify-content: center
+			align-items: center
+			@media screen and(max-width:1025px)
+				display: none
+			.contact-item
+				padding: 0 20px
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center
+				&:not(:last-child)
+					&:after
+						content: ''
+						display: block
+						position: absolute
+						right: 0
+						bottom: 4px
+						width: 1px
+						height: 20px
+						background: #e1e1e1
+				em
+					padding-right: 8px
+					font-size: 20px
+					color: #9f9d9e
+				a
+					color: #333333
+					font-weight: 400
+					font-size: 14px
+					line-height: 20px
+		.search-toggle
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 32px
+			height: 32px
+			background: #999999
+			transition: .3s all ease-in-out
+			&:hover
+				background: none
+				&:after
+					color: $main
+			&:after
+				transition: .3s all ease-in-out
+				font-family: 'Material Design Icons'
+				content: '\f349'
+				font-size: 20px
+				display: flex
+				position: absolute
+				left: 0
+				bottom: 0
+				height: 32px
+				width: 32px
+				color: #ffffff
+				background: none
+				justify-content: center
+			@media screen and(max-width:1600px)
+				margin-left: 16px
+			@media screen and(max-width:1025px)
+				margin-top: 10px
+		.searchbox
+			position: absolute
+			display: block
+			justify-content: center
+			align-items: center
+			position: relative
+			bottom: 6px
+			&.active
+				input,button
+					display: inline-block
+			input
+				padding: 0 16px
+				position: absolute
+				top: 0
+				height: 31px
+				right: 0
+				display: none
+			button
+				display: none
+				color: #ffffff
+				background: $main
+				width: 32px
+				height: 30px
+				border: none
+				position: absolute
+				top: 0
+				right: 0
+				em
+					color: #ffffff
+				&:focus
+					outline: none
+			@media screen and(max-width:1025px)
+				display: none
+				position: static
+				input
+					position: static
+					height: 30px
+				button
+					position: static
+					margin-left: -6px
+		// .searchbox
+		// 	position: relative
+		// 	@media screen and(max-width:1025px)
+		// 		display: none
+		// 	&:hover
+		// 		input
+		// 			opacity: 1
+		// 			z-index: 114
+		// 			pointer-events: auto
+		// 	input
+		// 		width: 170px
+		// 		background: #ffffff
+		// 		position: absolute
+		// 		padding: 0 16px
+		// 		right: 25px
+		// 		height: 26px
+		// 		z-index: 113
+		// 		opacity: 0
+		// 		pointer-events: none
+		// 		z-index: -1
+		// 		transition: opacity .3s ease-in-out
+		// 		&::placeholder
+		// 			font-style: italic
+		// 			font-size: 12px
+		// 		&:focus
+		// 			outline: none
+		// 	button
+		// 		border: none
+		// 		background: #999999
+		// 		em
+		// 			color: #ffffff
+		// 		&:focus
+		// 			outline: none
+		.language-wrapper
+			a
+				&:first-child
+					padding: 0 10px 0 20px
+			@media screen and(max-width:1025px)
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				a
+					&:first-child
+						padding: 0 20px
+		.mobile-toggle
+			height: 100%
+			display: none
+			em
+				font-size: 30px
+				color: #333333
+			@media screen and(max-width:1025px)
+				margin-left: 30px
+				margin-bottom: -4px
+				display: flex
+				justify-content: center
+				align-items: center
+.bottom-header
+	margin-top: 10px
+	@media screen and(max-width:1025px)
+		margin-top: 4px
+		display: none
+.bottom-header-navigation
+	list-style-type: none
+	padding: 0
+	margin: 0
+	li
+		display: inline-block
+		&:hover,&.active
+			a
+				color: $main
+		&:last-child
+			a
+				padding: 4px 0 4px 25px
+		a
+			padding: 4px 25px
+			transition: .3s all ease-in-out
+			text-decoration: none
+			color: #333333
+			text-transform: uppercase
+			font-size: 16px
+			line-height: 23px
+			font-weight: 600
+			text-transform: uppercase
+	@media screen and(max-width:1441px)
+		li
+			&:last-child
+				a
+					padding: 4px 0 4px 20px
+			a
+					padding: 4px 20px
+	@media screen and(max-width:1200px)
+		li
+			&:last-child
+				a
+					padding: 4px 0 4px 14px
+			a
+					padding: 4px 14px
+	@media screen and(max-width:1025px)
+		li
+			display: block
+			padding: 10px 4px
+			a
+	
+.mobile-wrapper
+	position: fixed
+	top: 60px
+	height: 100vh
+	padding: 10px 0 20px 0
+	min-width: 320px
+	transform: translateX(-100%)
+	width: 320px
+	background: #ffffff
+	display: none
+	transition: .3s all ease-in-out
+	@media screen and(max-width:1025px)
+		display: block
+		&.active
+			transform: translateX(0)
+	.searchbox
+		padding: 16px 0 0 16px
+		width: 100%
+		input
+			width: 80%
+			background: #ffffff
+			padding: 0 16px
+			height: 26px
+			&::placeholder
+				font-style: italic
+				font-size: 12px
+			&:focus
+				outline: none
+		button
+			border: none
+			background: #999999
+			em
+				color: #ffffff
+			&:focus
+				outline: none
+	.contact-wrapper
+		padding: 16px 0
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-flow: column
+		.contact-item
+			padding: 4px 20px
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			&:not(:last-child)
+			em
+				padding-right: 8px
+				font-size: 20px
+				color: #9f9d9e
+			a
+				color: #333333
+				font-weight: 400
+				font-size: 14px
+				line-height: 20px

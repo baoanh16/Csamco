@@ -1,0 +1,150 @@
+.home-progress
+	background: #4f4f4f
+	width: 100%
+	.progress-wrapper
+		display: flex
+		height: 140px
+		justify-content: space-between
+		align-items: center
+		flex: 0 0 100%
+		flex-wrap: wrap
+		.logo-text
+			flex: 0 0 25%
+	.progress-number-wrapper
+		flex: 0 0 75%
+		margin-top: -30px
+		position: relative
+		z-index: 1
+		height: 170px
+		background: #dddddd
+		display: flex
+		justify-content: center
+		align-items: center
+		&:before
+			position: absolute
+			bottom: 0
+			z-index: -1
+			left: -50px
+			transform: skewX(-30deg)
+			background: #ddd
+			width: 200px
+			height: 170px
+			content: ""
+		&:after
+			position: absolute
+			bottom: 0
+			z-index: -1
+			right: -500px
+			background: #ddd
+			width: 1000px
+			height: 170px
+			content: ""
+
+		.progress-item
+			display: flex
+			justify-content: center
+			align-items: center
+		.caption
+			padding: 0 16px
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-flow: column
+			.number
+				color: #333333
+				font-weight: 700
+				font-size: 25px
+			.text
+				font-size: 14px
+				caret-color: #333333
+				font-weight: 400
+	@media screen and(max-width:1200px)
+		.logo-text
+			flex: 0 0 30%
+		.progress-number-wrapper
+			flex: 0 0 70%
+	@media screen and(max-width:1025px)
+		.progress-wrapper
+			flex-direction: column
+			padding: 8px 0 0 0 
+			flex-flow: column
+			.logo-text
+				display: flex
+				justify-content: center
+				align-items: center
+				flex: 0 0 100%
+				max-height: 40px
+				padding: 5px 0 8px 0
+				img
+					max-width: 100%
+					height: auto
+					width: 80%
+		.progress-number-wrapper
+			padding-top: 10px
+			padding-bottom: 20px
+			max-height: 100px
+			margin: 0
+			justify-content: center
+			flex: 0 0 100%
+			&:before,&:after
+				height: 100px
+			&:before
+				width: 500px
+				left: -200px
+			.progress-item
+				height: 100%
+	@media screen and(max-width:768px)
+		height: 100%
+		max-height: 100%
+		.progress-wrapper
+			height: 100%
+			.logo-text
+				padding: 14px 0 8px
+		.progress-number-wrapper
+			padding: 16px 0 20px 16px
+			margin-top: 16px
+			max-height: 100%
+			flex-wrap: wrap
+			height: auto
+		
+			&:before,&:after
+				height: 153px
+			.progress-item
+				justify-content: center
+				flex: 0 0 50%
+				.progress-image
+					flex: 0 0 20%
+				.caption
+					flex:  0 0 80%
+	@media screen and(max-width:610px)
+		.progress-number-wrapper
+			&:before,&:after
+				height: 173px
+	@media screen and(max-width:576px)
+		.progress-number-wrapper
+			padding: 40px 0
+			&:before,&:after
+				height: 352px
+			.progress-item
+				flex: 0 0 100%
+				margin-bottom: 10px
+				.progress-image
+					flex: 0 0 30%
+					display: flex
+					justify-content: flex-end
+					align-items: center
+				.caption
+					flex:  0 0 70%
+	@media screen and(max-width:363px)
+		.progress-number-wrapper
+			&:before,&:after
+				height: 352px
+	@media screen and(max-width:346px)
+		.progress-number-wrapper
+			&:before,&:after
+				height: 373px
+	@media screen and(max-width:330px)
+		.progress-number-wrapper
+			&:before,&:after
+				height: 394px
+

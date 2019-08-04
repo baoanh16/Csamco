@@ -1,0 +1,71 @@
+.side-navigation-project-wrapper
+	list-style-type: none
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1)
+	margin: 65px 0
+	@media screen and(max-width:1441px)
+		margin: 60px 0
+	@media screen and(max-width:1025px)
+		padding: 0 0 40px 0
+	@media screen and(max-width:768px)
+		padding: 0 16px
+	h1
+		padding: 8px 16px 
+		display: block
+		font-size: 20px
+		font-weight: 600
+		color: #ffffff
+		background: $main
+	ul
+		list-style-type: none
+		padding: 0 16px
+		margin: 8px 0 0 0
+		li
+			display: inline-block
+			padding: 8px 0
+			a
+				text-decoration: none
+				color: #666666
+				font-size: 15px
+				line-height: 22px
+				font-weight: 400
+			span
+				font-size: 16px
+				text-transform: uppercase
+				font-weight: 600
+				width: 100%
+				display: flex
+				justify-content: space-between
+				align-items: center
+				em
+					font-size: 20px
+	.side-navigation-project
+		li
+			display: flex
+			flex-flow: column
+			&:not(:first-child)
+				border-top: 1px solid #ebebeb
+			&.active
+				span
+					em
+						transform: rotate(-180deg)
+				ul
+					display: flex
+					align-items: flex-start
+
+			span
+				em
+					transform: none
+					transition: transform .3s ease-in-out
+					
+			ul
+				display: none
+				align-items: center
+				justify-content: space-between
+				flex-direction: column
+				li
+					&:not(:first-child)
+						border: none
+					&.active
+						*
+							color: $main
+

@@ -1,0 +1,45 @@
+.philosophy-about-us
+	background: url('../img/about-us/bg.jpg')
+	background-repeat: no-repeat
+	background-size: 100% 100%
+	padding: 50px 0
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+.philosophy-wrapper
+	
+	.title
+		font-size: 22px
+		font-weight: 600
+		line-height: 30px
+		text-transform: uppercase
+		margin-bottom: 16px
+	.mark-item
+		padding-left: 28px
+		margin-bottom: 8px
+		position: relative
+		&:after
+			display: flex
+			justify-content: center
+			align-items: center
+			font-family: 'Material Design Icons'
+			content: '\f12c'
+			font-size: 13px
+			line-height: 15px
+			display: block
+			position: absolute
+			left: 0
+			top: 8px
+			width: 15px
+			border-radius: 50% 
+			height: 15px
+			color: #ffffff
+			background: $main
+		span
+	@media screen and(max-width:1025px)
+		margin-top: 20px
+		.title
+			font-size: 20px
+	@media screen and(max-width:768px)
+		margin-top: 20px
+		.title
+			font-size: 18px

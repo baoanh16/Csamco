@@ -1,0 +1,143 @@
+.news-display
+	padding: 50px 0 0 0
+	@media screen and(max-width:1025px)
+		padding: 40px 0 0 0
+.news-navigation
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		white-space: nowrap
+		overflow: auto
+		@media screen and(max-width:1025px)
+			justify-content: flex-start
+		li
+			display: inline-block
+			&:hover,&.active
+				a
+					background: $main
+					color: #ffffff
+			&:not(:last-child)
+				margin-right: 16px
+			a
+				transition: .3s all ease-in-out
+				width: 180px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 16px
+				font-weight: 500
+				color: #666666
+				border: 1px solid #e1e1e1
+	@media screen and(max-width:1025px)
+		margin-top: 30px
+	
+.news-wrapper
+.news-item-wrapper
+	margin-top: 30px
+	.news-side-wrapper
+		display: flex
+		flex-wrap: wrap
+		flex-flow: column
+		justify-content: space-between
+	.news-item-big
+		&:hover
+			.news-item-caption
+				.title
+					*
+						color: $main
+		@media screen and(max-width:1025px)
+			margin-bottom: 30px
+	.news-item-side
+		margin-bottom: 20px
+		background: #f4f4f4
+		display: flex
+		justify-content: 
+		align-items: center
+		flex-wrap: wrap
+		&:hover
+			.news-item-caption
+				.title
+					color: $main
+					*
+						color: $main
+		.news-item-image
+			padding-right: 10px
+			flex: 0 0 50%
+			height: 155px
+			@media screen and(max-width:1025px)
+				height: 200px
+			@media screen and(max-width:576px)
+				height: 155px
+		.news-item-caption
+			padding-left: 10px
+			transition: .3s all ease-in-out
+			flex: 0 0 50%
+			.title
+				font-size: 16px
+				color: #333333
+				*
+					color: #333333
+					transition: .3s all ease-in-out
+
+					font-size: 16px
+		@media screen and(max-width:576px)
+			.news-item-caption
+				.title
+					font-size: 15px
+					*
+						font-size: 15px
+	.news-item-image
+		width: auto
+		height: 345px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		@media screen and(max-width:576px)
+			height: 300px
+		@media screen and(max-width:400px)
+			height: 250px
+
+	.news-item-caption
+		time
+			display: block
+			color: #999999
+			font-size: 14px
+			font-weight: 400
+			margin: 8px 0
+		.title
+			font-weight: 700
+			color: $main
+			font-size: 18px
+			line-height: 24px
+			margin-bottom: 10px
+			*
+				transition: .3s all ease-in-out
+				font-weight: 700
+				color: #333333
+				font-size: 18px
+				line-height: 24px
+				margin-bottom: 10px
+				display: -webkit-box
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				overflow: hidden
+		.caption
+			font-size: 15px
+			line-height: 22px
+			color: #333333
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			overflow: hidden
+
+		@media screen and(max-width:576px)
+			.title
+				font-size: 16px
+				*
+					font-size: 16px

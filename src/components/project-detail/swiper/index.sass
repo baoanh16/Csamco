@@ -1,0 +1,103 @@
+.project-detail-swiper
+	padding: 50px 0
+	background: url('../img/project-detail/bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+	.swiper-project-top
+		.swiper-image
+			height: 550px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	.swiper-project-thumbs
+		padding: 40px 0
+		height: 100%
+		position: relative
+		.navigation-prev-project,.navigation-next-project
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			&:focus
+				outline: none
+			em
+				color: #666666
+				font-size: 20px
+		.navigation-prev-project
+			top: 10px
+		.navigation-next-project
+			bottom: 10px
+		.swiper-container
+			height: 100%
+		.swiper-image
+			height: 110px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.swiper-slide
+			width: 98%
+			margin-left: 2px
+			margin-top: 2px
+			transition: .3s all ease-in-out
+			&:not(.swiper-slide-thumb-active)
+				.swiper-image
+					position: relative
+					transition: .3s all ease-in-out
+					&:after
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						bottom: 0
+						width: 100%
+						height: 100%
+						background: rgba(#000000,.3)
+						z-index: 0
+			&.swiper-slide-thumb-active
+				.wrapper
+					transition: .3s all ease-in-out
+					box-shadow: 0px 0px 0px 2px rgba(221,27,35,1)
+	@media screen and(max-width:1441px)
+		.swiper-project-top
+			.swiper-image
+				height: 400px
+				width: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		.swiper-project-thumbs
+			height: 350px
+			padding: 20px 2px
+			overflow: hidden
+			.swiper-wrapper
+			.swiper-container
+				overflow: visible
+				height: 350px
+			.navigation-prev-project
+				top: -10px
+			.navigation-next-project
+				bottom: -60px
+	@media screen and(max-width:1025px)
+		.swiper-project-thumbs
+			height: 100%
+			.swiper-container
+				padding: 2px 0
+				height: 100%
+			.navigation-prev-project,.navigation-next-project
+				top: 50%
+				transform: translateY(-50%)
+	@media screen and(max-width:768px)
+		.swiper-project-top
+			.swiper-image
+				height: 300px
+		
+		

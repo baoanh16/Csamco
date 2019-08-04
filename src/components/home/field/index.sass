@@ -1,0 +1,113 @@
+.field-of-business-display
+	padding: 50px 0
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+	figure
+		position: relative
+		overflow: hidden
+		&:hover
+			figcaption
+				transform: translateY(0)
+				
+	.figure-image
+		height: 470px
+		width: auto
+		a
+			display: block
+			height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	figcaption
+		transition: all .8s cubic-bezier(.68,-.55,.265,1.55)
+		transform: translateY(50px)
+		position: absolute
+		bottom: 0
+		left: 20px
+		p
+			font-size: 24px
+			color: #ffffff
+			font-weight: 700
+			line-height: 30px
+			text-transform: uppercase
+		.figure-button
+			margin: 20px 0
+		
+		
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				width: 130px
+				height: 30px
+				color: #ffffff
+				text-transform: uppercase
+				background: #dd0917
+				font-size: 16px
+				vertical-align: middle
+				-webkit-transform: perspective(1px) translateZ(0)
+				transform: perspective(1px) translateZ(0)
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+				-webkit-transition-duration: 0.1s
+				transition-duration: 0.3s
+				&:hover
+					em
+						transform: translateX(4px)
+				em
+					color: #ffffff
+					margin-left: 10px
+					transform: translateZ(0)
+					transition-duration: 0.3s
+					transition-property: transform
+					transition-timing-function: ease-out
+	@media screen and(max-width:1441px)
+		.figure-image
+			height: 400px
+	@media screen and(max-width:1025px)
+		.figure-image
+			height: 300px
+		figure
+			padding-top: 20px
+		figcaption
+			transform: translateY(0)
+			p
+				font-size: 20px
+			.figure-button
+
+				margin: 16px 0
+				a
+					font-size: 14px
+	@media screen and(max-width:768px)
+		.figure-image
+			height: 250px
+		figcaption
+			left: 10px
+			p
+				font-size: 16px
+			.figure-button
+				margin: 5px 0 10px 0
+	@media screen and(max-width:576px)
+
+		.row
+			display: flex
+			flex-wrap: wrap
+			.col-6
+				.figure-image
+					height: 200px
+				figcaption
+					p
+						font-size: 14px
+						line-height: 20px
+					.figure-button
+						a
+							font-size: 13px
+							width: 120px
+			.col-12
+				flex: 0 0 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				margin: 0 auto
+
