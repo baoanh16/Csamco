@@ -89,14 +89,8 @@
 				<span>
 					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 				</span>
-				<img class="opacity">
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-				</img>
+				<xsl:apply-templates select="NewsImages" mode="Slide"></xsl:apply-templates>
+
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 			</div>
 			<div class="watch-more-about-us">
@@ -203,7 +197,7 @@
 				</div>
 				<div class="swiper-container certificate-swiper-1">
 					<div class="swiper-wrapper">
-						<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
+						<xsl:apply-templates select="NewsImages" mode="Light"></xsl:apply-templates>
 					</div>
 
 				</div>
@@ -255,5 +249,58 @@
 			</div>
 		</div>
 
+	</xsl:template>
+	<xsl:template match="NewsImages" mode="Light">
+		<div class="swiper-slide">
+			<div class="wrapper">
+				<div class="swiper-image shine">
+					<div class="lightgallery">
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<img>
+								<xsl:attribute name="src">
+									<xsl:value-of select="ImageUrl"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+							</img>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-caption">
+					<p>
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</xsl:template>
+
+	<xsl:template match="NewsImages" mode="Slide">
+		<div class="about-us-introduce-wrapper">
+			<div class="swiper-container">
+				<div class=" swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="wrapper">
+							<img class="opacity">
+								<xsl:attribute name="src">
+									<xsl:value-of select="ImageUrl"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+							</img>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</xsl:template>
 </xsl:stylesheet>

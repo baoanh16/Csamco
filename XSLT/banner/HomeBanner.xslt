@@ -29,16 +29,21 @@
 		<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		<div class="swiper-slide">
 			<div class="wrapper">
-				<div class="swiper-image">
-					<img>
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-					</img>
-				</div>
+				<a target="_blank" title="">
+					<xsl:attribute name="href">
+						<xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<div class="swiper-image">
+						<img>
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+						</img>
+					</div>
+				</a>
 				<div class="swiper-caption">
 					<span class="caption">
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>

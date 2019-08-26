@@ -3,6 +3,11 @@
 	article
 		position: relative
 		transition: max-height .5s ease-in-out
+		.about-us-introduce-wrapper
+			img
+				max-width: 100%
+				height: auto
+				width: 100%
 		&.active
 			.content
 				overflow: visible
@@ -61,7 +66,7 @@
 			content: ""
 			display: table
 			clear: both
-		img
+		.about-us-introduce-wrapper
 			padding-left: 20px
 			position: relative
 			z-index: 13
@@ -94,23 +99,22 @@
 			.watch-more-about-us
 				left: 50%
 				transform: translateX(-50%)
-
-		
-
-			img
+			.about-us-introduce-wrapper
 				height: auto
 				max-width: 50%
 				margin: 0
 	@media screen and(max-width:768px)
 		article
 			margin-top: -16px
-			padding:  0  0 16px 0
+			padding:  30px  0 16px 0
 			display: flex
 			flex-flow: column
 			align-items: center
 			span
 				font-size: 18px
-			img
+				margin: 0
+				padding: 0
+			.about-us-introduce-wrapper
 				max-width: 100%
 				float: none
 				margin: 0
@@ -118,8 +122,8 @@
 			
 	@media screen and(max-width:576px)
 		article
-			padding: 0 0 16px 0 
-			img
+			padding: 30px  0 16px 0
+			.about-us-introduce-wrapper
 				max-width: 100%
 				float: none
 				margin: 0

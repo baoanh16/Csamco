@@ -4,13 +4,13 @@
 	<xsl:template match="/">
 
 		<section class="home-partner">
-			<div class="article-title-brown-center">
+			<div class="article-title-brown-center" data-aos="zoom-out" data-aos-offset="120" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out">
 				<p class="title">
 					<xsl:value-of select="/BannerList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
 				</p>
 			</div>
 			<div class="container">
-				<div class="swiper-container">
+				<div class="swiper-container" data-aos="fade-up" data-aos-offset="120" data-aos-delay="700" data-aos-duration="800" data-aos-easing="ease-in-out">
 					<div class="swiper-wrapper">
 						<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 

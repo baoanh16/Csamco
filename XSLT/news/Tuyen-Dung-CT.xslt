@@ -28,7 +28,7 @@
 							<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullContent"></xsl:value-of>
 							<div class="job-apply-button-wrapper">
 								<div class="red-button">
-									<a href="#">Ứng tuyển ngay</a>
+									<a href="javascript:void(0)">Ứng tuyển ngay</a>
 								</div>
 								<a>
 									<xsl:attribute name="href">
@@ -50,6 +50,13 @@
 									<span>(Nộp trực
 										tiếp)</span>
 								</div>
+							</div>
+							<div class="form-apply">
+								<iframe>
+									<xsl:attribute name="src">
+										<xsl:value-of select="/NewsDetail/ApplyUrl"></xsl:value-of>
+									</xsl:attribute>
+								</iframe>
 							</div>
 						</article>
 					</section>

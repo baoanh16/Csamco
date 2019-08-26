@@ -2,21 +2,30 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
-		<article>
+		<article data-aos="fade-left" data-aos-offset="120" data-aos-delay="550" data-aos-duration="1000" data-aos-easing="ease-in-out">
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</article>
 	</xsl:template>
 	<xsl:template match="News">
 		<xsl:if test="position() =1">
 			<div class="article-image circle">
-				<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
+				<a>
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:attribute name="alt">
+					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-				</img>
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
+
 			</div>
 			<div class="project-title">
 				<p>

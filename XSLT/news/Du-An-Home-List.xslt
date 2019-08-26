@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			<div class="other-project-swiper-wrapper">
-				<div class="swiper-container">
+				<div class="swiper-container" data-aos="fade-zoom-in" data-aos-offset="0" data-aos-delay="0" data-aos-duration="600" data-aos-easing="ease-in-out">
 					<div class="swiper-wrapper">
 						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 					</div>
@@ -35,7 +35,7 @@
 							</xsl:attribute>
 							<img>
 								<xsl:attribute name="src">
-									<xsl:value-of select="ImageUrl"></xsl:value-of>
+									<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 								</xsl:attribute>
 								<xsl:attribute name="alt">
 									<xsl:value-of select="Title"></xsl:value-of>

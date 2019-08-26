@@ -23,6 +23,7 @@
     "font-awesome": "5.9.0",
     "linearicons": "1.0.1",
     "lazysizes": "5.1.0",
-    "paginationjs": "^2.1.4"
+    "paginationjs": "^2.1.4",
+    "aos": "^2.3.4"
   }
 }

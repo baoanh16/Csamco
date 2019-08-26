@@ -6,7 +6,7 @@
 
 		<section class="about-us-block">
 			<div class="container">
-				<div class="article-title-brown-center">
+				<div class="article-title-brown-center" data-aos="fade-down" data-aos-offset="120" data-aos-delay="750" data-aos-duration="1000" data-aos-easing="ease-in-out">
 					<p class="title">
 						<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of>
 					</p>
@@ -20,7 +20,7 @@
 
 	<xsl:template match="Zone">
 		<div class="col-lg-6">
-			<article>
+			<article data-aos="fade-right" data-aos-offset="120" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 				<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
 				<div class="article-red-button">
 					<a>
@@ -37,7 +37,7 @@
 			</article>
 		</div>
 		<div class="col-lg-6">
-			<article>
+			<article data-aos="fade-left" data-aos-offset="120" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 				<div class="article-image">
 					<img>
 						<xsl:attribute name="src">

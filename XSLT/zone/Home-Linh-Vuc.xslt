@@ -7,13 +7,13 @@
 
 			<section class="field-of-business-display">
 				<div class="container">
-					<div class="article-title-white-center">
+					<div class="article-title-white-center" data-aos="zoom-in" data-aos-offset="120" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 						<p class="title">
 							<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of>
 							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 						</p>
 					</div>
-					<div class="row">
+					<div class="row" data-aos="fade-zoom-in" data-aos-offset="0" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
 						<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 					</div>
 				</div>

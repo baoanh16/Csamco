@@ -42,17 +42,21 @@
 						</div>
 					</div>
 					<div class="col-lg-2">
-						<div class="swiper-project-thumbs">
+						<div class="swiper-navigation-wrapper-project-detail">
 							<div class="navigation-prev-project">
 								<em class="mdi mdi-chevron-up"></em>
 							</div>
 							<div class="navigation-next-project">
 								<em class="mdi mdi-chevron-down"></em>
 							</div>
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<xsl:apply-templates select="/NewsDetail/NewsImages" mode="Thumb"></xsl:apply-templates>
 
+							<div class="swiper-project-thumbs">
+
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<xsl:apply-templates select="/NewsDetail/NewsImages" mode="Thumb"></xsl:apply-templates>
+
+									</div>
 								</div>
 							</div>
 						</div>
@@ -144,7 +148,7 @@
 						</xsl:attribute>
 						<img>
 							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
+								<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 							</xsl:attribute>
 							<xsl:attribute name="alt">
 								<xsl:value-of select="Title"></xsl:value-of>

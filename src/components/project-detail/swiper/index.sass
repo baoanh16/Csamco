@@ -5,6 +5,38 @@
 	background-size: cover
 	@media screen and(max-width:1025px)
 		padding: 40px 0
+	.swiper-navigation-wrapper-project-detail
+		position: relative
+		.navigation-prev-project,.navigation-next-project
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			left: 50%
+			z-index: 11
+			transform: translateX(-50%)
+			&:focus
+				outline: none
+			em
+				color: #666666
+				font-size: 20px
+		.navigation-prev-project
+			top: -10px
+		.navigation-next-project
+			bottom: -10px
+		.swiper-container
+			height: 100%
+		@media screen and(max-width:1441px)
+			.navigation-prev-project
+				top: -10px
+			.navigation-next-project
+				bottom: -35px
+		@media screen and(max-width:1025px)
+			.navigation-prev-project,.navigation-next-project
+				display: none
+		@media screen and(max-width:768px)
+			.navigation-prev-project,.navigation-next-project
+				display: none
 	.swiper-project-top
 		.swiper-image
 			height: 550px
@@ -14,27 +46,11 @@
 				height: 100%
 				object-fit: cover
 	.swiper-project-thumbs
-		padding: 40px 0
+		padding: 20px 0
 		height: 100%
+		height: 550px
 		position: relative
-		.navigation-prev-project,.navigation-next-project
-			display: flex
-			justify-content: center
-			align-items: center
-			position: absolute
-			left: 50%
-			transform: translateX(-50%)
-			&:focus
-				outline: none
-			em
-				color: #666666
-				font-size: 20px
-		.navigation-prev-project
-			top: 10px
-		.navigation-next-project
-			bottom: 10px
-		.swiper-container
-			height: 100%
+		.wrapper
 		.swiper-image
 			height: 110px
 			width: auto
@@ -44,6 +60,7 @@
 				object-fit: cover
 		.swiper-slide
 			width: 98%
+			height: 25% !important
 			margin-left: 2px
 			margin-top: 2px
 			transition: .3s all ease-in-out
@@ -68,36 +85,38 @@
 	@media screen and(max-width:1441px)
 		.swiper-project-top
 			.swiper-image
-				height: 400px
+				height: 550px
 				width: auto
 				img
 					width: 100%
 					height: 100%
-					object-fit: cover
+					object-fit: fill
 		.swiper-project-thumbs
-			height: 350px
-			padding: 20px 2px
+			padding: 29px 0
+			height: 500px
 			overflow: hidden
-			.swiper-wrapper
+			.swiper-image
+				height: 100px
 			.swiper-container
-				overflow: visible
-				height: 350px
-			.navigation-prev-project
-				top: -10px
-			.navigation-next-project
-				bottom: -60px
+				height: 100%
+			.swiper-container
+				overflow: hidden
+			
 	@media screen and(max-width:1025px)
 		.swiper-project-thumbs
 			height: 100%
+			margin:  0 0
+			padding: 20px 0
+			.swiper-wrapper
+				height: 100%
 			.swiper-container
 				padding: 2px 0
 				height: 100%
-			.navigation-prev-project,.navigation-next-project
-				top: 50%
-				transform: translateY(-50%)
+	
 	@media screen and(max-width:768px)
 		.swiper-project-top
 			.swiper-image
 				height: 300px
-		
-		
+	@media screen and(max-width:576px)
+		.swiper-project-thumbs
+			margin: 0

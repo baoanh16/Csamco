@@ -1,6 +1,12 @@
 $(document).ready(function() {
 	//Hide element mapping
+
 	if ($(window).width() < 1025) {
+		$(".link-to-website .has-sub span").on("click", function() {
+			$(this)
+				.parent()
+				.toggleClass("active");
+		});
 		$(".bottom-header").fadeIn(function() {
 			$(".bottom-header").css({
 				display: "flex"
@@ -29,7 +35,19 @@ $(document).ready(function() {
 	});
 	// Library Init
 	$(".lightgallery").lightGallery();
+	AOS.init({
+		disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+		initClassName: "aos-init", // class applied after initialization
+		animatedClassName: "aos-animate", // class applied on animation
 
+		delay: 0, // values from 0 to 3000, with step 50ms
+		duration: 700, // values from 0 to 3000, with step 50ms
+		easing: "ease", // default easing for AOS animations
+		once: true, // whether animation should happen only once - while scrolling down
+		mirror: false, // whether elements should animate out while scrolling past them
+		anchorPlacement: "top-bottom" // defines which position of the element regarding to window should trigger the animation
+	});
 	$(".search-toggle").on("click", function() {
 		$(".searchbox").toggleClass("active");
 	});
@@ -41,9 +59,9 @@ $(document).ready(function() {
 	moreNewsAboutUs();
 	projectNavigation();
 	tabActive();
-	employeeNavigation();
 	linkToWebsiteValue();
 	searchBoxMapping();
+	toggleApplyForm();
 });
 // Remove when click outside the circle
 const $menu = $(".searchbox");
@@ -56,10 +74,22 @@ $(document).mouseup(e => {
 		$menu.removeClass("active");
 	}
 });
+
+const $link = $(".link-to-website");
+$(document).mouseup(e => {
+	if (
+		!$link.is(e.target) && // if the target of the click isn't the container...
+		$link.has(e.target).length === 0
+	) {
+		// ... nor a descendant of the container
+		$(".link-to-website .has-sub").removeClass("active");
+	}
+});
 function linkToWebsiteValue() {
 	$(".link-to-website .nav-sub li a").click(function() {
 		var selection = $(this).text();
 		$(".link-to-website .has-sub span").text(selection);
+		$(".link-to-website .has-sub").removeClass("active");
 		// $(".hotline-contact-option").attr("data-selected-value", dataValue);
 	});
 }
@@ -101,8 +131,23 @@ function toggleMobile() {
 			.toggleClass("active");
 	});
 }
+function toggleApplyForm() {
+	$(".job-apply-button-wrapper .red-button").on("click", function() {
+		$(".form-apply").slideToggle();
+	});
+}
 //swiper
 function swiperInit() {
+	var mySwiper1 = new Swiper(
+		".about-us-introduce-wrapper .swiper-container",
+		{
+			autoplay: {
+				delay: 5000
+			},
+			speed: 1200,
+			slidesPerView: 1
+		}
+	);
 	var mySwiper = new Swiper(".home-banner .swiper-container", {
 		// Optional parameters
 		loop: true,
@@ -276,29 +321,23 @@ function swiperInit() {
 	var galleryThumbs = new Swiper(".swiper-project-thumbs .swiper-container", {
 		spaceBetween: 0,
 		freeMode: true,
-
+		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpointsInverse: true,
 		breakpoints: {
 			320: {
-				slidesPerView: 2,
-				direction: "horizontal",
-				spaceBetween: 10
-			},
-			400: {
-				slidesPerView: 3,
+				slidesPerView: 2.5,
 				direction: "horizontal",
 				spaceBetween: 10
 			},
 			576: {
-				slidesPerView: 4,
+				slidesPerView: 3.5,
 				direction: "horizontal",
 				spaceBetween: 10
 			},
 			1025: {
-				slidesPerView: 3,
-				direction: "vertical",
-				spaceBetween: 10
+				slidesPerView: 4,
+				direction: "vertical"
 			},
 			1440: {
 				slidesPerView: 4,
@@ -380,8 +419,4 @@ function searchBoxMapping() {
 		desktopMethod: "insertAfter",
 		breakpoint: 1025
 	}).watch();
-}
-
-function employeeNavigation() {
-	$(".tuyen-dung .employee-banner ").after($(".tuyen-dung .newspager"));
 }

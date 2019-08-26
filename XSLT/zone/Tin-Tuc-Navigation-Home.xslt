@@ -3,13 +3,13 @@
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
 		<xsl:if test="count(/ZoneList/Zone) > 0">
-			<div class="article-title-brown-center">
+			<div class="article-title-brown-center" data-aos="zoom-in-down" data-aos-offset="120" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
 				<p class="title">
 					<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of>
 				</p>
 			</div>
 			<div class="news-navigation">
-				<ul class="tab-list-navigation">
+				<ul class="tab-list-navigation" data-aos="fade-in-up" data-aos-offset="120" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
 					<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 				</ul>
 			</div>

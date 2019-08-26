@@ -17,7 +17,7 @@ footer
 		margin-top: 16px
 	.link-to-website
 		margin-top: 16px
-		background: rgba(#ffffff,.3)
+		background: rgba(#ffffff,.3) !important
 		
 		p
 			font-size: 18px
@@ -26,9 +26,12 @@ footer
 			text-transform: uppercase
 		ul
 			list-style-type: none
-			padding: 0 0 0 16px
+			padding: 0 
 			margin: 0
 			z-index: 115
+			@media screen and(max-width:1025px)
+				&:hover
+					background: rgba(#ffffff,.3) !important
 			&:hover
 				background: #ffffff
 				z-index: 111
@@ -57,7 +60,8 @@ footer
 			.has-sub
 				position: relative
 				width: 100%
-				&:hover
+				
+				&.active
 					span,a
 						color: #ff0000
 						z-index: 115
@@ -67,10 +71,10 @@ footer
 							color: #ff0000
 					.nav-sub
 						z-index: 114
-						padding: 30px 0 0
+						padding: 30px 0 10px 27px
 						opacity: 1
 						filter: none
-						background: #ffffff
+						background: #f4f4f4
 						transition: opacity .3s ease,z-index .3s ease .1s
 						li
 							padding: 0 22px
@@ -86,6 +90,36 @@ footer
 							&:hover
 								a
 									color: #333
+				@media screen and(min-width:1025px)
+					&:hover
+						span,a
+							color: #ff0000
+							z-index: 115
+							&:after
+								z-index: 11
+								transform: rotate(-180deg)
+								color: #ff0000
+						.nav-sub
+							z-index: 114
+							padding: 30px 0 10px 27px
+							opacity: 1
+							filter: none
+							background: #f4f4f4
+							transition: opacity .3s ease,z-index .3s ease .1s
+							li
+								padding: 0 22px
+								line-height: 32px
+								display: block
+								a
+									text-transform: none
+									color: #333333
+									padding: 0
+									font-size: 16px
+									&:after
+										display: none
+								&:hover
+									a
+										color: #333
 				span,a
 					position: relative
 					&:after
@@ -97,6 +131,7 @@ footer
 						color: #ffffff
 						transition: transform .3s ease
 				span
+					padding-left: 16px
 					display: block
 					width: 90%
 					&:after
@@ -142,6 +177,21 @@ footer
 		li
 			padding: 8px 0
 			display: inline-block
+			position: relative
+			&:hover
+				&:after
+					opacity: 1
+			&:after
+				transition: .3s all ease-in-out
+				content: ''
+				display: block
+				opacity: 0
+				position: absolute
+				left: 0
+				bottom: 4px
+				width: 100%
+				height: 1px
+				background: #ffffff
 			a
 				text-decoration: none
 				color: #ffffff
@@ -194,6 +244,9 @@ footer
 		.copyright
 			p
 				font-size: 16px
+				a
+					color: #333333
+					font-size: 16px
 			ul
 				list-style-type: none
 				padding: 0
