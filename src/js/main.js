@@ -138,11 +138,11 @@ function toggleApplyForm() {
 }
 //swiper
 function swiperInit() {
-	var mySwiper1 = new Swiper(
+	var mySwiper1about = new Swiper(
 		".about-us-introduce-wrapper .swiper-container",
 		{
 			autoplay: {
-				delay: 5000
+				delay: 2500
 			},
 			speed: 1200,
 			slidesPerView: 1
@@ -320,7 +320,7 @@ function swiperInit() {
 
 	var galleryThumbs = new Swiper(".swiper-project-thumbs .swiper-container", {
 		spaceBetween: 0,
-		freeMode: true,
+		freeMode: false,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpointsInverse: true,
@@ -341,8 +341,7 @@ function swiperInit() {
 			},
 			1440: {
 				slidesPerView: 4,
-				direction: "vertical",
-				spaceBetween: 20
+				direction: "vertical"
 			}
 		}
 	});

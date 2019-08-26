@@ -89,8 +89,13 @@
 				<span>
 					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 				</span>
-				<xsl:apply-templates select="NewsImages" mode="Slide"></xsl:apply-templates>
-
+				<div class="about-us-introduce-wrapper">
+					<div class="swiper-container">
+						<div class=" swiper-wrapper">
+							<xsl:apply-templates select="NewsImages" mode="Slide"></xsl:apply-templates>
+						</div>
+					</div>
+				</div>
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 			</div>
 			<div class="watch-more-about-us">
@@ -220,7 +225,7 @@
 
 					<div class="swiper-wrapper">
 
-						<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
+						<xsl:apply-templates select="NewsImages" mode="Light"></xsl:apply-templates>
 					</div>
 
 				</div>
@@ -284,23 +289,19 @@
 	</xsl:template>
 
 	<xsl:template match="NewsImages" mode="Slide">
-		<div class="about-us-introduce-wrapper">
-			<div class="swiper-container">
-				<div class=" swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="wrapper">
-							<img class="opacity">
-								<xsl:attribute name="src">
-									<xsl:value-of select="ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Title"></xsl:value-of>
-								</xsl:attribute>
-							</img>
-						</div>
-					</div>
-				</div>
+
+		<div class="swiper-slide">
+			<div class="wrapper">
+				<img class="opacity">
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+				</img>
 			</div>
 		</div>
+
 	</xsl:template>
 </xsl:stylesheet>
